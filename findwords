@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+#define BARIS 15
+#define KOLOM 15
+
+using namespace std;
+
+bool isvalid(int baris, int kolom, int prevRow, int prevCol)
+{
+ return (baris >= 0) && (baris < BARIS) &&
+  (kolom >= 0) && (kolom < KOLOM) &&
+  !(baris== prevRow && kolom == prevCol);
+}
