@@ -4,9 +4,14 @@
 
 using namespace std;
 
-bool isvalid(int baris, int kolom, int prevRow, int prevCol)
+bool tidak_jadi(int baris, int kolom, int prevRow, int prevCol)
 {
  return (baris >= 0) && (baris < BARIS) &&
   (kolom >= 0) && (kolom < KOLOM) &&
   !(baris== prevRow && kolom == prevCol);
 }
+int no_baris[]={-1, -1, -1, 0, 0, 1, 1, 1};
+int no_kolom[]={-1, 0, 1, -1, 1, -1, 0, 1};
+int DFS(char mat[][KOLOM], int baris, int kolom,
+  int prevRow, int prevCol, char* kata,
+  string path, int index, int n)
