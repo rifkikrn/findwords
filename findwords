@@ -84,32 +84,40 @@ int pjg_kata = pjg[m], x=0;
         }
 
  for(int c = 0 ; c < 15 ; c++){
-            for(int a=0; a<=(15-pjg_kata); a++) {
-                for(int b=a; b<=a+(pjg_kata-1); b++) {
-                    if(*(*(Y+b)+c) == kata[m][x]) ada[x] = 1;
-                    else ada[x] = 0;
-                    x++;
-                }
-                for(int k=0; k<pjg_kata; k++) {
-                    if(ada[k]==1) {
-                        result = 1;
-                        hasil[m]+=result;
-                    }
+       for(int a=0; a<=(15-pjg_kata); a++) {
+       for(int b=a; b<=a+(pjg_kata-1); b++) {
+       if(*(*(Y+b)+c) == kata[m][x]) ada[x] = 1;
+       else ada[x] = 0;
+       x++;
+          }
+             for(int k=0; k<pjg_kata; k++) {
+             if(ada[k]==1) {
+              result = 1;
+              hasil[m]+=result;
+              }
                 else {
                 result = 0;
-                    break;
-                    }
-                    if(hasil[m]==pjg_kata) { 
-                        hasil_akhir[m]=1; 
-                        goto next; 
-                    }
-                }
-                hasil[m]=0;
-                x=0;
-            }
+           break;
+           }
+        if(hasil[m]==pjg_kata) { 
+           hasil_akhir[m]=1; 
+            goto next; 
+               }
+          }
+        hasil[m]=0;
+         x=0;
         }
+        }
+	next;
+	x=0;
 	 cout<<endl<<"Hasil pencarian kata : "<<endl;
          for(int a=0; a<jmlh_kata; a++) {
         if(hasil_akhir[a]==1)
         {
+	  cout<<a+1<<". ADA"<<endl;
+         }
+          else cout<<a+1<<". TIDAK ADA"<<endl;
+         }
+         return 0;
+         }
 	
