@@ -76,3 +76,30 @@ int pjg_kata = pjg[m], x=0;
         if(hasil[m]==pjg_kata) { 
         hasil_akhir[m]=1; 
                         goto next; 
+}
+
+ for(int c = 0 ; c < 15 ; c++){
+            for(int a=0; a<=(15-pjg_kata); a++) {
+                for(int b=a; b<=a+(pjg_kata-1); b++) {
+                    if(*(*(Y+b)+c) == kata[m][x]) ada[x] = 1;
+                    else ada[x] = 0;
+                    x++;
+                }
+                for(int k=0; k<pjg_kata; k++) {
+                    if(ada[k]==1) {
+                        result = 1;
+                        hasil[m]+=result;
+                    }
+                else {
+                result = 0;
+                    break;
+                    }
+                    if(hasil[m]==pjg_kata) { 
+                        hasil_akhir[m]=1; 
+                        goto next; 
+                    }
+                }
+                hasil[m]=0;
+                x=0;
+            }
+        }
