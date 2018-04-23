@@ -120,4 +120,5 @@ int pjg_kata = pjg[m], x=0;
          }
          return 0;
          }
+	 }
 	
