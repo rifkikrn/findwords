@@ -19,11 +19,11 @@ int DFS(char mat[][KOLOM], int baris, int kolom,
  if (index > n || mat[baris][kolom] != kata[index])
   return 0;
 
- path += string(1, kata[index]) + "(" + to_string(baris)
+ //path += string(1, kata[index]) + "(" + to_string(baris)
    + ", " + to_string(kolom) + ") ";
 
  if (index == n){
-  cout << "Ada" << endl << path << endl;
+  cout << "Ada" << endl << endl;
   return 0;
   }
 
