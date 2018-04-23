@@ -15,3 +15,15 @@ int no_kolom[]={-1, 0, 1, -1, 1, -1, 0, 1};
 int DFS(char mat[][KOLOM], int baris, int kolom,
   int prevRow, int prevCol, char* kata,
   string path, int index, int n)
+  {
+ if (index > n || mat[baris][kolom] != kata[index])
+  return 0;
+
+ path += string(1, kata[index]) + "(" + to_string(baris)
+   + ", " + to_string(kolom) + ") ";
+
+ if (index == n){
+  cout << "Ada" << endl << path << endl;
+  return 0;
+  }
+
