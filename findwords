@@ -108,3 +108,8 @@ int pjg_kata = pjg[m], x=0;
                 x=0;
             }
         }
+	 cout<<endl<<"Hasil pencarian kata : "<<endl;
+         for(int a=0; a<jmlh_kata; a++) {
+        if(hasil_akhir[a]==1)
+        {
+	
