@@ -76,7 +76,12 @@ int pjg_kata = pjg[m], x=0;
         if(hasil[m]==pjg_kata) { 
         hasil_akhir[m]=1; 
                         goto next; 
-}
+	}
+	}
+        hasil[m]=0;
+        x=0;
+    	}
+        }
 
  for(int c = 0 ; c < 15 ; c++){
             for(int a=0; a<=(15-pjg_kata); a++) {
