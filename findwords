@@ -24,3 +24,30 @@ int main()
     char *Y[] = {A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15};
     
     cout <<"\t\tFIND WORDS"<<endl<<endl;
+
+
+int pjg_kata = pjg[m], x=0;
+    bool ada[pjg_kata], result;
+        
+        for(int r = 0 ; r < 15 ; r++){
+        for(int a=0; a<=(15-pjg_kata); 
+        a++) {
+        for(int b=a; b<=a+(pjg_kata-1); 
+        b++) {
+        if(*(*(Y+r)+b) == kata[m][x]) ada[x] = 1;
+    	else ada[x] = 0;
+        x++;
+         }
+        for(int k=0; k<pjg_kata; 
+        k++) {
+        if(ada[k]==1) {
+        result = 1;
+        hasil[m]+=result;
+        }
+        else {
+    	result = 0;
+        break;
+        }
+        if(hasil[m]==pjg_kata) { 
+        hasil_akhir[m]=1; 
+                        goto next; 
